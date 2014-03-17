@@ -1,0 +1,11 @@
+Package: me.k3a.octopus
+Name: Octopus Keyboard
+Depends: firmware (>= 5.0), mobilesubstrate, preferenceloader (>= 2.0.4)
+Pre-Depends: com.ericasadun.utilities
+Conflicts: com.japaneatahand.manualcorrectpro, com.japaneatahand.manualcorrect
+Version: 1.0.5
+Architecture: iphoneos-arm
+Description: Type like an octopus! A license needed for activation. This is a pre-release build, when sending me an email, please mention that. Also note that I may not be able to respond to every email regarding pre-releases.
+Author: K3A <ok@k3a.me>
+Section: Tweaks
+Icon: file:///Library/PreferenceBundles/OKPrefs.bundle/OKIcon@2x.png

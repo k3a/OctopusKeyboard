@@ -1,0 +1,125 @@
+//
+//  Created by K3A on 5/20/12.
+//  Copyright (c) 2012 K3A. All rights reserved.
+//
+
+subsystem octopus 777;
+serverprefix srv_;
+
+#include <mach/std_types.defs>
+#include <mach/mach_types.defs>
+
+import "octopus_mach_types.h";
+
+type string_t = c_string[*:1024];
+type oword_t = c_string[*:257];
+type oword_t_ptr = oword_t;
+type ostats_t = struct [1] of uint32_t;
+type bool = uint8_t;
+type sSuggestions = struct [2128] of uint8_t;
+type sDictionary = struct [1024+1024+4+4+1+4+1] of uint8_t;
+type sDictionaryArray = ^array [] of sDictionary;
+
+routine oGetStats(
+        server  : mach_port_t;
+	out stats   : ostats_t
+);
+
+routine oSuggConfigure(
+        server              : mach_port_t;
+    in  maxSugg             : uint32_t;
+	in	suggThreshold		: uint32_t;
+    in  proximitySuggestion : bool;
+    in  errorCorrection     : bool;
+    in  completion          : bool
+);
+
+routine oSuggConfigureCaps(
+        server              : mach_port_t;
+    in  capKnownWords       : bool;
+    in  capSentence         : bool;
+    in  capUser             : bool;
+    in  capNext             : bool
+);
+
+routine oSuggGetSuggestions(
+        server              : mach_port_t;
+    out suggs               : sSuggestions
+);
+
+routine oInputClear(
+        server              : mach_port_t
+);
+
+routine oInputInsertString(
+        server              : mach_port_t;
+    in  str                 : oword_t, const;
+    in  capitalize          : int32_t;
+    in  disableLearn        : bool
+);
+
+routine oInputCursorMove(
+        server              : mach_port_t;
+    in  typex                : int32_t;
+    in  offset              : int32_t
+);
+
+routine oInputRemove(
+        server              : mach_port_t;
+    in  before                : int32_t;
+    in  after              : int32_t
+);
+
+routine oEnableAutoLearning(
+        server              : mach_port_t;
+    in  autolearn           : bool
+);
+
+routine oInputInsertSugg(
+        server              : mach_port_t;
+    in  set           : uint32_t;
+    in  ident           : uint32_t;
+    in  appendSpace           : bool
+);
+routine oInputLearn(
+		server              : mach_port_t
+);
+
+
+routine oProfileSave(
+        server              : mach_port_t
+);
+
+routine oDictGetList(
+        server              : mach_port_t;
+    out dicts               : sDictionaryArray, dealloc
+);
+
+routine oUserDictGetWordForID(
+		server              : mach_port_t;
+	in	idx					: uint32_t;
+	out word				: oword_t_ptr
+);
+
+routine oUserDictClear(
+        server              : mach_port_t
+);
+
+routine oUserDictGetNumWords(
+        server              : mach_port_t;
+    out numWords            : uint32_t
+);
+
+routine oUserDictImportMessages(
+        server              : mach_port_t
+);
+routine oUserDictImportContacts(
+server              : mach_port_t
+);
+
+routine oReloadPrefs(
+		server              : mach_port_t
+);
+
+
+

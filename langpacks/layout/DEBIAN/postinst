@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Restarting/loading daemon..."
+killall octopusd || true

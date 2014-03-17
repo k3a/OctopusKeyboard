@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>When automatic learning is enabled, Octopus learns new words as you type.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSStaticTextCell</string>
+			<key>label</key>
+			<string>Learned Words</string>
+			<key>get</key>
+			<string>numWords:</string>
+		</dict>
+		<dict>
+            <key>cell</key>
+            <string>PSLinkListCell</string>
+            <key>default</key>
+            <integer>3000</integer>
+            <key>defaults</key>
+            <string>me.k3a.OctopusKeyboard</string>
+            <key>detail</key>
+            <string>PSListItemsController</string>
+            <key>key</key>
+            <string>userDictMaxWords</string>
+            <key>label</key>
+            <string>Max. User Words</string>
+            <key>validValues</key>
+            <array>
+                <integer>3000</integer>
+                <integer>6000</integer>
+                <integer>12000</integer>
+            </array>
+            <key>validTitles</key>
+            <array>
+                <string>3000</string>
+                <string>6000</string>
+                <string>12000</string>
+            </array>
+            <key>PostNotification</key>
+            <string>me.k3a.OctopusKeyboard/reloadPrefs</string>
+        </dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>me.k3a.OctopusKeyboard</string>
+			<key>key</key>
+			<string>learn</string>
+			<key>label</key>
+			<string>Learn Automatically</string>
+			<key>PostNotification</key>
+			<string>me.k3a.OctopusKeyboard/reloadPrefs</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Learn from Messages</string>
+			<key>action</key>
+			<string>learnWords</string>
+		</dict> 
+		<dict>
+            <key>cell</key>
+            <string>PSButtonCell</string>
+            <key>label</key>
+            <string>Learn Names from Contacts</string>
+            <key>action</key>
+            <string>learnContacts</string>
+        </dict>
+		<dict>
+            <key>cell</key>
+            <string>PSLinkCell</string>
+            <key>detail</key>
+            <string>OKUserDictEdit</string>
+            <key>label</key>
+            <string>Edit Learned Words</string>
+			<key>alignment</key>
+            <integer>2</integer>
+        </dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Delete ALL Learned Words</string>
+			<key>action</key>
+			<string>deleteWords</string>
+			<key>confirmation</key>
+			<dict>
+				<key>cancelTitle</key>
+				<string>NO!</string>
+				<key>okTitle</key>
+				<string>Delete Words</string>
+				<key>title</key>
+				<string>Delete Words</string>
+				<key>prompt</key>
+				<string>Are you sure you want to delete all learned words?</string>
+			</dict>
+
+		</dict>	
+		
+	</array>
+	<key>title</key>
+	<string>User Dictionary</string>
+</dict>
+</plist>

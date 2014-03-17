@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Restarting/loading daemon..."
+killall octopusd || true
+chown 0:0 /System/Library/LaunchDaemons/me.k3a.octopusd.plist
+launchctl load -w /System/Library/LaunchDaemons/me.k3a.octopusd.plist || true
+
+echo "Disabling autocorrection if enabled..."
+plutil -key KeyboardAutocorrection -value 0 -type bool /var/mobile/Library/Preferences/com.apple.Preferences.plist

@@ -1,0 +1,120 @@
+(my internal notes. Maybe it will help somehow)
+
+
+-[<UIKeyboardImpl: 0x1beaf860> initWithFrame:{{0, 0}, {320, 216}}]
+-[<UIKeyboardImpl: 0x1beaf860> setFrame:{{0, 0}, {320, 216}}]
+-[<UIKeyboardImpl: 0x1beaf860> setOrientationForSize:{320, 216}]
+
+
+-[<UIKeyboardImpl: 0x1beaf860> shiftLockPreference]
+-[<UIKeyboardImpl: 0x1beaf860> doubleSpacePeriodPreference]
+-[<UIKeyboardImpl: 0x1beaf860> UILanguagePreference]
+
+-[<UIKeyboardImpl: 0x1beaf860> hardwareKeyboardAvailabilityChanged]
+-[<UIKeyboardImpl: 0x1beaf860> setInHardwareKeyboardMode:0]
+
++[<UIKeyboardImpl: 0x3ed704b4> isSplit]
+
+-[<UIKeyboardImpl: 0x1beaf860> acceptWord:<UIKeyboardCandidateSingle: 0x1bf26320> firstDelete:0]
+
+----------------------------------
+
+STARTING/INFO
+-[<UIKeyboardLayoutStar: 0x1ce459f0> initWithFrame:{{0, 0}, {320, 216}}]
+-[<UIKeyboardLayoutStar: 0x1ce459f0> installGestureRecognizers]
+-[<UIKeyboardLayoutStar: 0x1ce459f0> showKeyboardType:0 appearance:0 orientation:Portrait withShift:1]
+-[<UIKeyboardLayoutStar: 0x1ce459f0> handwritingPlane] = 0
+-[<UIKeyboardLayoutStar: 0x1bc6e0> usesAutoShift] (automatically capitalize)
+-[<UIKeyboardLayoutStar: 0x1bc6e0> shift] (whether shift is ON)
+
+
+HIT TESTING
+-[<UIKeyboardLayoutStar: 0x1ce459f0> generateInfoForTouch:<UITouch: 0x1cf9a970>
+-[<UIKeyboardLayoutStar: 0x1ce459f0> keyHitTestForTouchInfo:<UIKeyboardTouchInfo: 0x1cf24160> touchStage:0]
+
+ACTIVE KEY
+-[<UIKeyboardLayoutStar: 0x1ce459f0> setState:1 forKey:<UIKBTree: 0x1ce47350> - Latin-Capital-Letter-D/Key: 6 properties + 0 subtrees]
+-[<UIKeyboardLayoutStar: 0x1ce459f0> setActiveKey:<UIKBTree: 0x1ce47350> - Latin-Capital-Letter-D/Key: 6 properties + 0 subtrees]
+-[<UIKeyboardLayoutStar: 0x1ce459f0> restoreDefaultsForAllKeys]
+deactivateAllInActivatedSet
+
+ACCENT VARIANTS
+-[<UIKeyboardLayoutStar: 0x1bc6e0> longPressAction]
+[<UIKeyboardLayoutStar: 0x1bc6e0> activeKey]
+-[<UIKeyboardLayoutStar: 0x1bc6e0> isLongPressedKey:
+-[<UIKeyboardLayoutStar: 0x1bc6e0> keyHasAccentedVariants:
+-[<UIKeyboardLayoutStar: 0x1bc6e0> showPopupVariantsForKey:
+XXXXXXXXXXXXX
+-[<UIKeyboardLayoutStar: 0x1bc6e0> refreshGhostKeyState]
+-[<UIKeyboardLayoutStar: 0x1bc6e0> setActiveKey:(null)]
+-[<UIKeyboardLayoutStar: 0x1bc6e0> deactivateAllInActivatedSet]
+XXXXXXXXXXXXX
+-[<UIKeyboardLayoutStar: 0x1bc6e0> sendStringAction:â forKey:<UIKBTree: 0xfe98fb0> - Latin-Small-Letter-A/Key: 9 properties + 9 subtrees isPopupVariant:1]
+
+UPDATING KEYPLANE
+-[<UIKeyboardLayoutStar: 0x1ce459f0> updateKeyboardForKeyplane:<UIKBTree: 0x1ce492f0> - 527211970_iPhone-Alphabetic-Keyboard_Small-Letters/Keyplane: 7 properties + 4 subtrees]
+
+LONG PRESS
+-[<UIKeyboardLayoutStar: 0x1ce459f0> longPressAction]
+
+CLEARING INPUT
+-[<UIKeyboardLayoutStar: 0x1bc6e0> didClearInput]
+
+
+------------- UIKeyboard -------------------
+
++[<UIKeyboard: 0x3ed704dc> isOnScreen]
+-[<UIKeyboard: 0xe935010> isMinimized]
+-[<UIKeyboard: 0xe935010> orientation]
+
+-[<UIKeyboard: 0xe935010> activate]
+-[<UIKeyboard: 0xe935010> removeFromSuperview]
+
+
+
+AAA
+BBB
+CCC
+DDD
+
+
+
+           autocapitalization:                  2
+           autocorrection:                      0
+           spellchecking:                       0
+           keyboard type:                       0
+           kb appearance:                       0
+           return key type:                     0
+           auto return key:                     N
+           secure text entry:                   N
+
+
+
+
++[<UIKeyboardImpl: 0x3ed704b4> refreshRivenStateWithTraits
+
+
+
+UIKeyboardImpl:
+- (id)textInputTraits;
+
+
+
+
+----- SELECTIONS ------------
+
+-[<UIKeyboardImpl: 0xc6673e0> selectionWillChange:<U
+
+-[<UIKeyboardImpl: 0xc6673e0> selectionDidChange:
+
+currentInputContextFromInputDelegateWithWordRange
+
+ -[<UIKeyboardLayoutStar: 0xf69bbf0> resizeForKeyplaneSize:{320, 216}]
+
+
+
+
+
+
+
+

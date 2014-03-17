@@ -1,0 +1,9 @@
+Package: me.k3a.octopus.et
+Name: Estonian Octopus Dictionary
+Depends: me.k3a.octopus
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Language dictionary add-on for Octopus Keyboard
+Maintainer: K3A
+Author: K3A
+Section: Dictionaries

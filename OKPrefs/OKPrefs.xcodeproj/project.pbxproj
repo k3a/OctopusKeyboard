@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		722B1D37158B8864002F2E22 /* OKDicts.h in Headers */ = {isa = PBXBuildFile; fileRef = 722B1D35158B8864002F2E22 /* OKDicts.h */; };
+		722B1D38158B8864002F2E22 /* OKDicts.mm in Sources */ = {isa = PBXBuildFile; fileRef = 722B1D36158B8864002F2E22 /* OKDicts.mm */; };
+		72BCE85114F9A53E00213F41 /* Shared.h in Headers */ = {isa = PBXBuildFile; fileRef = 72BCE85014F9A53D00213F41 /* Shared.h */; };
+		72CA9BC61572B0D40016E3BA /* OKPrefs.mm in Sources */ = {isa = PBXBuildFile; fileRef = 72CA9BC41572B0D40016E3BA /* OKPrefs.mm */; };
+		72CA9BC71572B0D40016E3BA /* OKPrefs.h in Headers */ = {isa = PBXBuildFile; fileRef = 72CA9BC51572B0D40016E3BA /* OKPrefs.h */; };
+		72D448F214CC1F7E00247B46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D448F114CC1F7E00247B46 /* Foundation.framework */; };
+		72D4490514CC1FEF00247B46 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D4490414CC1FEF00247B46 /* UIKit.framework */; };
+		72D4490814CC2C5100247B46 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D4490714CC2C5100247B46 /* Twitter.framework */; };
+		72D4490A14CC2DD500247B46 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D4490914CC2DD500247B46 /* Accounts.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		72076C9D14FBCE2C00752C2A /* about.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = about.txt; path = Resources/about.txt; sourceTree = "<group>"; };
+		72210643164B03F500A5162A /* about.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = about.txt; sourceTree = "<group>"; };
+		72210644164B03F500A5162A /* buy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buy.png; sourceTree = "<group>"; };
+		72210645164B03F500A5162A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72210646164B03F500A5162A /* OKIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OKIcon.png; sourceTree = "<group>"; };
+		72210647164B03F500A5162A /* OKIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OKIcon@2x.png"; sourceTree = "<group>"; };
+		72210648164B03F500A5162A /* Options.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Options.plist; sourceTree = "<group>"; };
+		72210649164B03F500A5162A /* UserDict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserDict.plist; sourceTree = "<group>"; };
+		722B1D35158B8864002F2E22 /* OKDicts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKDicts.h; sourceTree = SOURCE_ROOT; };
+		722B1D36158B8864002F2E22 /* OKDicts.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OKDicts.mm; sourceTree = SOURCE_ROOT; };
+		72BCE85014F9A53D00213F41 /* Shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = SOURCE_ROOT; };
+		72CA9BC41572B0D40016E3BA /* OKPrefs.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OKPrefs.mm; sourceTree = SOURCE_ROOT; };
+		72CA9BC51572B0D40016E3BA /* OKPrefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKPrefs.h; sourceTree = SOURCE_ROOT; };
+		72D448EE14CC1F7E00247B46 /* libOKPrefs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOKPrefs.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		72D448F114CC1F7E00247B46 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		72D4490414CC1FEF00247B46 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		72D4490714CC2C5100247B46 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		72D4490914CC2DD500247B46 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		72D448EB14CC1F7E00247B46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72D4490A14CC2DD500247B46 /* Accounts.framework in Frameworks */,
+				72D4490814CC2C5100247B46 /* Twitter.framework in Frameworks */,
+				72D4490514CC1FEF00247B46 /* UIKit.framework in Frameworks */,
+				72D448F214CC1F7E00247B46 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72210642164B03F500A5162A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				72210643164B03F500A5162A /* about.txt */,
+				72210644164B03F500A5162A /* buy.png */,
+				72210645164B03F500A5162A /* Info.plist */,
+				72210646164B03F500A5162A /* OKIcon.png */,
+				72210647164B03F500A5162A /* OKIcon@2x.png */,
+				72210648164B03F500A5162A /* Options.plist */,
+				72210649164B03F500A5162A /* UserDict.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		72D448E314CC1F7E00247B46 = {
+			isa = PBXGroup;
+			children = (
+				72210642164B03F500A5162A /* Resources */,
+				72076C9D14FBCE2C00752C2A /* about.txt */,
+				72D448F314CC1F7E00247B46 /* OKPrefs */,
+				72D4490914CC2DD500247B46 /* Accounts.framework */,
+				72D4490714CC2C5100247B46 /* Twitter.framework */,
+				72D4490414CC1FEF00247B46 /* UIKit.framework */,
+				72D448EF14CC1F7E00247B46 /* Products */,
+				72D448F014CC1F7E00247B46 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		72D448EF14CC1F7E00247B46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72D448EE14CC1F7E00247B46 /* libOKPrefs.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		72D448F014CC1F7E00247B46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72D448F114CC1F7E00247B46 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72D448F314CC1F7E00247B46 /* OKPrefs */ = {
+			isa = PBXGroup;
+			children = (
+				72CA9BC41572B0D40016E3BA /* OKPrefs.mm */,
+				72CA9BC51572B0D40016E3BA /* OKPrefs.h */,
+				72BCE85014F9A53D00213F41 /* Shared.h */,
+				722B1D36158B8864002F2E22 /* OKDicts.mm */,
+				722B1D35158B8864002F2E22 /* OKDicts.h */,
+			);
+			name = OKPrefs;
+			path = AEPrefs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		72D448EC14CC1F7E00247B46 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72BCE85114F9A53E00213F41 /* Shared.h in Headers */,
+				72CA9BC71572B0D40016E3BA /* OKPrefs.h in Headers */,
+				722B1D37158B8864002F2E22 /* OKDicts.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		72D448ED14CC1F7E00247B46 /* OKPrefs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72D448FB14CC1F7E00247B46 /* Build configuration list for PBXNativeTarget "OKPrefs" */;
+			buildPhases = (
+				72D4490614CC22EE00247B46 /* ShellScript */,
+				7256E5E814F1949900E186C6 /* Sources */,
+				72D448EB14CC1F7E00247B46 /* Frameworks */,
+				72D448EC14CC1F7E00247B46 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OKPrefs;
+			productName = AEPrefs;
+			productReference = 72D448EE14CC1F7E00247B46 /* libOKPrefs.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		72D448E514CC1F7E00247B46 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = K3A;
+			};
+			buildConfigurationList = 72D448E814CC1F7E00247B46 /* Build configuration list for PBXProject "OKPrefs" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 72D448E314CC1F7E00247B46;
+			productRefGroup = 72D448EF14CC1F7E00247B46 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				72D448ED14CC1F7E00247B46 /* OKPrefs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72D4490614CC22EE00247B46 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make test";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7256E5E814F1949900E186C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72CA9BC61572B0D40016E3BA /* OKPrefs.mm in Sources */,
+				722B1D38158B8864002F2E22 /* OKDicts.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		72D448F914CC1F7E00247B46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		72D448FA14CC1F7E00247B46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		72D448FC14CC1F7E00247B46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = armv6;
+				CODE_SIGN_IDENTITY = "";
+				DSTROOT = /tmp/AEPrefs.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				HEADER_SEARCH_PATHS = (
+					../include,
+					/theos/include,
+				);
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = OKPrefs;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		72D448FD14CC1F7E00247B46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = armv6;
+				CODE_SIGN_IDENTITY = "";
+				DSTROOT = /tmp/AEPrefs.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				HEADER_SEARCH_PATHS = (
+					../include,
+					/theos/include,
+				);
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = OKPrefs;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		72D448E814CC1F7E00247B46 /* Build configuration list for PBXProject "OKPrefs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72D448F914CC1F7E00247B46 /* Debug */,
+				72D448FA14CC1F7E00247B46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72D448FB14CC1F7E00247B46 /* Build configuration list for PBXNativeTarget "OKPrefs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72D448FC14CC1F7E00247B46 /* Debug */,
+				72D448FD14CC1F7E00247B46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 72D448E514CC1F7E00247B46 /* Project object */;
+}

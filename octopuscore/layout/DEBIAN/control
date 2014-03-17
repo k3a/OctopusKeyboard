@@ -1,0 +1,9 @@
+Package: k3a.me.octopusd
+Name: OctopusDaemon
+Depends: 
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Daemon for Octopus Keyboard
+Maintainer: K3A
+Author: K3A
+Section: System

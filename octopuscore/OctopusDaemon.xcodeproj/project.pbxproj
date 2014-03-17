@@ -1,0 +1,381 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7202463E156908BF001C8AE0 /* octopus.defs in Sources */ = {isa = PBXBuildFile; fileRef = 7202463D156908BF001C8AE0 /* octopus.defs */; settings = {ATTRIBUTES = (Server, Client, ); }; };
+		7202466415691691001C8AE0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7202466315691691001C8AE0 /* main.cpp */; };
+		7202466A156916A1001C8AE0 /* octopus.defs in Sources */ = {isa = PBXBuildFile; fileRef = 7202463D156908BF001C8AE0 /* octopus.defs */; };
+		7202466C15691B5A001C8AE0 /* Layouts.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7202466B15691B5A001C8AE0 /* Layouts.mm */; };
+		7242924F158FBF4200AD6994 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7242924E158FBF4200AD6994 /* Foundation.framework */; };
+		72802235158BC53900B4F7A4 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72802234158BC53900B4F7A4 /* libsqlite3.dylib */; };
+		72F5A1621567FB720090D8A2 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 72F5A1611567FB720090D8A2 /* main.mm */; };
+		72F5A16E1567FE360090D8A2 /* TextInput.mm in Sources */ = {isa = PBXBuildFile; fileRef = 72F5A16D1567FE360090D8A2 /* TextInput.mm */; };
+		72F5A172156800D20090D8A2 /* examples.mm in Sources */ = {isa = PBXBuildFile; fileRef = 72F5A170156800D20090D8A2 /* examples.mm */; };
+		72F5A4AD156810050090D8A2 /* libkpt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F5A4AC156810050090D8A2 /* libkpt.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7202465E15691690001C8AE0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		72F5A15B1567FB720090D8A2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		72024637156906DF001C8AE0 /* octopus_mach_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = octopus_mach_types.h; path = OctopusDaemon/octopus_mach_types.h; sourceTree = SOURCE_ROOT; };
+		7202463D156908BF001C8AE0 /* octopus.defs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.mig; name = octopus.defs; path = OctopusDaemon/octopus.defs; sourceTree = "<group>"; };
+		7202466015691690001C8AE0 /* OctopusTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OctopusTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7202466315691691001C8AE0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		7202466B15691B5A001C8AE0 /* Layouts.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Layouts.mm; sourceTree = "<group>"; };
+		7202466D15691B6D001C8AE0 /* Layouts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layouts.h; sourceTree = "<group>"; };
+		7242924E158FBF4200AD6994 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		72802234158BC53900B4F7A4 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		72F0A977156D88F000949069 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		72F5A15D1567FB720090D8A2 /* OctopusDaemon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OctopusDaemon; sourceTree = BUILT_PRODUCTS_DIR; };
+		72F5A1611567FB720090D8A2 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		72F5A16D1567FE360090D8A2 /* TextInput.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TextInput.mm; sourceTree = "<group>"; };
+		72F5A16F1567FE4F0090D8A2 /* TextInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextInput.h; sourceTree = "<group>"; };
+		72F5A170156800D20090D8A2 /* examples.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = examples.mm; sourceTree = "<group>"; };
+		72F5A171156800D20090D8A2 /* examples.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = examples.h; sourceTree = "<group>"; };
+		72F5A4AC156810050090D8A2 /* libkpt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libkpt.a; path = lib/libkpt.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7202465D15691690001C8AE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72F5A15A1567FB720090D8A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7242924F158FBF4200AD6994 /* Foundation.framework in Frameworks */,
+				72802235158BC53900B4F7A4 /* libsqlite3.dylib in Frameworks */,
+				72F5A4AD156810050090D8A2 /* libkpt.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7202463B156906FA001C8AE0 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				7202463D156908BF001C8AE0 /* octopus.defs */,
+				72024637156906DF001C8AE0 /* octopus_mach_types.h */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		7202466215691691001C8AE0 /* OctopusTest */ = {
+			isa = PBXGroup;
+			children = (
+				7202466315691691001C8AE0 /* main.cpp */,
+			);
+			path = OctopusTest;
+			sourceTree = "<group>";
+		};
+		72F5A1521567FB720090D8A2 = {
+			isa = PBXGroup;
+			children = (
+				7242924E158FBF4200AD6994 /* Foundation.framework */,
+				72F5A4AC156810050090D8A2 /* libkpt.a */,
+				72802234158BC53900B4F7A4 /* libsqlite3.dylib */,
+				7202463B156906FA001C8AE0 /* Shared */,
+				72F5A1601567FB720090D8A2 /* OctopusDaemon */,
+				7202466215691691001C8AE0 /* OctopusTest */,
+				72F5A15E1567FB720090D8A2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		72F5A15E1567FB720090D8A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72F5A15D1567FB720090D8A2 /* OctopusDaemon */,
+				7202466015691690001C8AE0 /* OctopusTest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		72F5A1601567FB720090D8A2 /* OctopusDaemon */ = {
+			isa = PBXGroup;
+			children = (
+				72F5A170156800D20090D8A2 /* examples.mm */,
+				72F5A171156800D20090D8A2 /* examples.h */,
+				72F5A1611567FB720090D8A2 /* main.mm */,
+				72F0A977156D88F000949069 /* main.h */,
+				72F5A16D1567FE360090D8A2 /* TextInput.mm */,
+				72F5A16F1567FE4F0090D8A2 /* TextInput.h */,
+				7202466B15691B5A001C8AE0 /* Layouts.mm */,
+				7202466D15691B6D001C8AE0 /* Layouts.h */,
+			);
+			path = OctopusDaemon;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7202465F15691690001C8AE0 /* OctopusTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7202466715691691001C8AE0 /* Build configuration list for PBXNativeTarget "OctopusTest" */;
+			buildPhases = (
+				7202465C15691690001C8AE0 /* Sources */,
+				7202465D15691690001C8AE0 /* Frameworks */,
+				7202465E15691690001C8AE0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OctopusTest;
+			productName = OctopusTest;
+			productReference = 7202466015691690001C8AE0 /* OctopusTest */;
+			productType = "com.apple.product-type.tool";
+		};
+		72F5A15C1567FB720090D8A2 /* OctopusDaemon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72F5A1671567FB720090D8A2 /* Build configuration list for PBXNativeTarget "OctopusDaemon" */;
+			buildPhases = (
+				72F5A1591567FB720090D8A2 /* Sources */,
+				72F5A15A1567FB720090D8A2 /* Frameworks */,
+				72F5A15B1567FB720090D8A2 /* CopyFiles */,
+				728C59D0156E331700A94D3F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OctopusDaemon;
+			productName = OctopusDaemon;
+			productReference = 72F5A15D1567FB720090D8A2 /* OctopusDaemon */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		72F5A1541567FB720090D8A2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = K3A;
+			};
+			buildConfigurationList = 72F5A1571567FB720090D8A2 /* Build configuration list for PBXProject "OctopusDaemon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 72F5A1521567FB720090D8A2;
+			productRefGroup = 72F5A15E1567FB720090D8A2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				72F5A15C1567FB720090D8A2 /* OctopusDaemon */,
+				7202465F15691690001C8AE0 /* OctopusTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		728C59D0156E331700A94D3F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make OctopusDaemon/octopusServer.c";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7202465C15691690001C8AE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7202466415691691001C8AE0 /* main.cpp in Sources */,
+				7202466A156916A1001C8AE0 /* octopus.defs in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72F5A1591567FB720090D8A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72F5A1621567FB720090D8A2 /* main.mm in Sources */,
+				72F5A16E1567FE360090D8A2 /* TextInput.mm in Sources */,
+				72F5A172156800D20090D8A2 /* examples.mm in Sources */,
+				7202463E156908BF001C8AE0 /* octopus.defs in Sources */,
+				7202466C15691B5A001C8AE0 /* Layouts.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7202466815691691001C8AE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7202466915691691001C8AE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		72F5A1651567FB720090D8A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		72F5A1661567FB720090D8A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		72F5A1681567FB720090D8A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"MACOSX=1",
+					"DEBUG=1",
+					"IOS=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../include",
+					"$(SRCROOT)/../include/kptapi",
+					"$(SRCROOT)/../include/pal",
+					"$(SRCROOT)/../include/kptapi/android",
+					"$(SRCROOT)/../include/pal/android",
+				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../lib";
+				OTHER_CFLAGS = "-Wno-multichar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		72F5A1691567FB720090D8A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"MACOSX=1",
+					"IOS=1",
+				);
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../include",
+					"$(SRCROOT)/../include/kptapi",
+					"$(SRCROOT)/../include/pal",
+					"$(SRCROOT)/../include/kptapi/android",
+					"$(SRCROOT)/../include/pal/android",
+				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../lib";
+				OTHER_CFLAGS = "-Wno-multichar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7202466715691691001C8AE0 /* Build configuration list for PBXNativeTarget "OctopusTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7202466815691691001C8AE0 /* Debug */,
+				7202466915691691001C8AE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72F5A1571567FB720090D8A2 /* Build configuration list for PBXProject "OctopusDaemon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72F5A1651567FB720090D8A2 /* Debug */,
+				72F5A1661567FB720090D8A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72F5A1671567FB720090D8A2 /* Build configuration list for PBXNativeTarget "OctopusDaemon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72F5A1681567FB720090D8A2 /* Debug */,
+				72F5A1691567FB720090D8A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 72F5A1541567FB720090D8A2 /* Project object */;
+}
