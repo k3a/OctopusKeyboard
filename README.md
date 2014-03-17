@@ -3,7 +3,7 @@ OctopusKeyboard
 
 Predictive keyboard add-on for jailbroken iOS devices showing word suggestions above individual keys.
 
-Website: http://ok.k3a.me
+Website: http://ok.k3a.me <br/>
 Developer & User forums: http://forum.k3a.me
 
 libkpt.a is compiled version of unmodified OpenAdaptxt library which can be downloaded at:
