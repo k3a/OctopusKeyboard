@@ -412,14 +412,6 @@ static void ColobusFail(CFNotificationCenterRef center, void *observer, CFString
 		//s_timeOK = tm < 1340060264 + 15*24*60*60+1;
         s_timeOK = true;
 		
-        _colobusSettings = [[NSMutableDictionary alloc] initWithContentsOfFile:@COLOBUS_PREF_FILE];
-        if (_colobusSettings)
-            NSLog(@"OK: Prefs: Shadow preferences loaded.");
-        else
-        {
-            NSLog(@"OK: Prefs: Failed to load shadow preferences. Creating...");
-            _colobusSettings = [[NSMutableDictionary alloc] init];
-        }
         
         // apply defaults
         //if (![_settings objectForKey:@"detectLang"])
@@ -428,19 +420,7 @@ static void ColobusFail(CFNotificationCenterRef center, void *observer, CFString
         // save defaults just in case
         [_settings writeToFile:@PREF_FILE atomically:YES];
         
-        // add observers
-        CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), self, ColobusSuccess, (CFStringRef)@"me.k3a.OctopusKeyboard.colobus.success", NULL, CFNotificationSuspensionBehaviorCoalesce);
-        CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), self, ColobusFail, (CFStringRef)@"me.k3a.OctopusKeyboard.colobus.fail", NULL, CFNotificationSuspensionBehaviorCoalesce);
-        
-        // get status
-        CPDistributedMessagingCenter* msgCenter = [CPDistributedMessagingCenter centerNamed:@"me.k3a.OctopusKeyboard.colobus"];
-        //NSDictionary* input = [NSDictionary dictionaryWithObject:@"getStatus" forKey:@"action"];
-        //NSDictionary* statusOut = [msgCenter sendMessageAndReceiveReplyName:@"message" userInfo:input];
-        _state = 0;
-        if (GetColobusPort())
-        {
-                _state = 1;
-        }
+       _state = 1;
 		
 		// watch settings change
 		CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, OnSettingsChangedNotif, CFSTR("me.k3a.OctopusKeyboard/reloadPrefs"), NULL, CFNotificationSuspensionBehaviorCoalesce);
@@ -458,7 +438,6 @@ static void ColobusFail(CFNotificationCenterRef center, void *observer, CFString
     [_tableView release];
 	//[_title release];
     [_settings release];
-    [_colobusSettings release];
     [super dealloc];
 }
 
@@ -575,13 +554,6 @@ static void ColobusFail(CFNotificationCenterRef center, void *observer, CFString
         NSLog(@"OK: Prefs: Settings saved");
     else
         NSLog(@"OK: Prefs: Failed to save settings");
-    
-    NSString* email = [_settings objectForKey:@"email"];
-    if (email) [_colobusSettings setObject:email forKey:@"email"];
-    if ([_colobusSettings writeToFile:@COLOBUS_PREF_FILE atomically:YES])
-        NSLog(@"OK: Prefs: Shadow settings saved");
-    else
-        NSLog(@"OK: Prefs: Failed to save shadow settings");
     
     // inform the tweak
 	OnSettingsChanged();
@@ -724,120 +696,7 @@ static char* s1 = "Bet";
     UITableViewCell *cell = nil;
     CGSize sz = tableView.frame.size;
     
-    if (indexPath.section == 0)
-    {
-        if (indexPath.row == 0)
-        {
-            static NSString *CellIdentifier = @"SELicState";
-            
-            cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-            if (cell == nil) 
-            {
-				if (!s_timeOK)
-				{
-					cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-					cell.selectionStyle = UITableViewCellSelectionStyleNone;
-					cell.textLabel.text = [NSString stringWithFormat:@"%s%s%s%s%s%s%s", s1,s2,s3,s4,s5,s6,s7];
-					return cell;
-				}
-				
-                cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-                
-                UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(10,8,sz.width/2, 30)];
-                label.font = [UIFont boldSystemFontOfSize:18];
-                label.backgroundColor = [UIColor clearColor];
-                label.textAlignment = UITextAlignmentLeft;
-                label.text = @"License Status";
-                
-                UILabel* stat = [[UILabel alloc] initWithFrame:CGRectMake(160,8,sz.width/2, 30)];
-                stat.font = [UIFont systemFontOfSize:18];
-                stat.backgroundColor = [UIColor clearColor];
-                if (_state == 0)
-                {
-					/*stat.textColor = [UIColor colorWithRed:0.2f green:0.8f blue:0.2f alpha:1];
-                    stat.text = @"Valid";*/
-                    stat.textColor = [UIColor grayColor];
-                    stat.text = @"Unknown";
-                }
-                else if (_state == 1)
-                {
-                    stat.textColor = [UIColor colorWithRed:0.2f green:0.8f blue:0.2f alpha:1];
-                    stat.text = @"Valid";
-                }
-                else if (_state == 2)
-                {
-                    stat.textColor = [UIColor redColor];
-                    stat.text = @"Not valid";
-                }
-                 
-                [cell.contentView addSubview:label];
-                [cell.contentView addSubview:stat];
-                [label release];
-            }
-        }
-        if (indexPath.row == 1)
-        {
-            static NSString *CellIdentifier = @"OKEmail";
-            
-            cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-            if (cell == nil) 
-            {
-                cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-                
-                UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(10,8,sz.width/2, 30)];
-                label.font = [UIFont boldSystemFontOfSize:18];
-                label.backgroundColor = [UIColor clearColor];
-                label.text = @"Identifier";
-                
-                UITextField* text = [[UITextField alloc] initWithFrame:CGRectMake(100,10,190,40)];
-                text.font = [UIFont systemFontOfSize:18];
-                text.borderStyle = UITextBorderStyleNone;
-                text.autocapitalizationType = UITextAutocapitalizationTypeNone;
-                text.placeholder = @"E-Mail";
-                text.tag = 1;
-                text.text = [_settings objectForKey:@"email"];
-				text.secureTextEntry = YES;
-                text.delegate = self;
-                
-                [cell.contentView addSubview:label];
-                [cell.contentView addSubview:text];
-                
-                [label release];
-                [text release];
-            }
-        }
-        else if (indexPath.row == 2 || indexPath.row == 3)
-        {
-            static NSString *CellIdentifier = @"OKButton";
-            
-            cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-            if (cell == nil) 
-            {
-                cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-                
-                //UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(10,6,sz.width-30, 30)];
-                cell.textLabel.font = [UIFont boldSystemFontOfSize:20];
-                cell.textLabel.backgroundColor = [UIColor clearColor];
-                cell.textLabel.textAlignment = UITextAlignmentCenter;
-                if (indexPath.row == 2)
-                    cell.textLabel.text = @"Download the License";
-                else 
-                    cell.textLabel.text = @"Buy the License";
-                
-                //[cell.contentView addSubview:label];
-                //[label release];
-                
-                /*UIButton* button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-                [button setFrame:CGRectMake(5, 5, 290, 35)];
-                [button setTitle:@"Download the License" forState:UIControlStateNormal];
-                //cell.accessoryView = button;
-                [cell.contentView addSubview:button];*/
-            }
-        }
-    }
-    else if (indexPath.section == 1) // switches + speak between...
+    if (indexPath.section == 1) // switches + speak between...
     {
         if (indexPath.row == 0)
         {
