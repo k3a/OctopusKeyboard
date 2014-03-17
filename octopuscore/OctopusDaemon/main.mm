@@ -414,7 +414,6 @@ static void Usage()
     printf("Copyright (C) 2012 K3A (www.k3a.me)\n\n");
     printf("Usage:\n");
     printf("    -h  This usage list\n");
-    printf("    -x  Do not daemonize\n");
     printf("    -s  Print daemon stats\n");
     printf("    -e  Examples and tests\n");
     printf("\n");
@@ -565,7 +564,6 @@ void* timeThread(void*)
 
 int main(int argc, char * argv[])
 {
-    bool        daemonize = false;
     char		c;
     
     while ((opterr == 1) && (c = getopt(argc, argv, "hxse")) != EOF) {
@@ -573,10 +571,6 @@ int main(int argc, char * argv[])
 			case 'h':
 				Usage();
 				exit (0);
-				
-			case 'x':
-				daemonize = false;
-				break;
 				
 			case 's':
 				PrintStats();
