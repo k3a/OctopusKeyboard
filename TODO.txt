@@ -1,41 +1,28 @@
-(this is my internal, old TODO. Ignore for now. I will try to gather all my notes into one central todo)
 
 Todo octopus: 
 -----------------
-+ bug: high cpu usage
-+ clicking on Installed Dictionaries causes crashes for some people
-+ after variants (accents) for a key are shown don't allow Octopus completion
-+ backpace does not update suggestions
-+ swipe up does not work when autocorrection enabled (Octopus now disables it automatically)
-+ bug: longer words on neighboring keys may overlap
-+ option to disable bold font for written part
-+ KeyLayout: add characters from variant (accent) keys
-+ ability to import contact names from Contacts as words in user dictionary
-+ do not learn weird words containing unusual characters like %#$ or digits only
-+ capitalization problems (starting a new word with uppercase character, remembering cases e.g. for iPhone, capslock)
-+ problem with right to left languages (Hebrew/Arabic)
-+ problem with completing a word with an apostrophe
-+ iPad Support finished
-+ fixed learning-as-you-type problems
-+ swipe down to make a plural form of a completion suggestion
-+ proximity suggestions work now (Wjen will be fixed to When)
-+ attempt to fix word suggestions displaying more than once
-++ final:
-+ small fix for plural forms (sandwich -> sandwiches)
-+ increase font on iPad
-++ update:
-+ hebrew problem??? Why? Look at syslog!
-+ danish dictionary
-
+- switching dicts when switching keyboards
+- a way to disable octopus when you switch to a different language keyboard
+- put font size to preferences?
+- Prefs: new option "Learn From Incoming Messages" (some people may not want it learn from Messages)
+- Prefs: option to select max numbers of suggestions (someone wanted to show only 3)
+- Long words leak outside the screen
+- Think: What to do when maximum of learned user words is reached? after the maximum user words count is stored it should replace the oldest (less frequntly used words) instead of just not storing new words (Luke Christodoulou)
+- Pluralization for other langs like Spanish
+- Idea: more sources to learn words from (mails? notes?)
+- user dictionary editing UI (mainly for deleting words)a
+- bug: Problem completing @ (maybe even #?) for some reason
+- Don't store numbers in the dictionary (don't complete numbers)!
+- overlay cut problem https://twitter.com/NavehIDL/status/334363671939665920/photo/1 (iphone 5 6.1.2 non-pre version)
+- sometimes not reloading suggestions? :-O https://twitter.com/NavehIDL/status/334364024324124673/photo/1 (iphone 5 6.1.2 non-pre version)
+- minor: proximity suggestions doesn't work on non-latin keyboards
 - integrate processing stats (how long one request took)
 - potential incompatibility: BiteSMS with SwipeShiftCaret: when using QuckReply after waking the device, it crashes??
 - new option: add "Add Space After Completion" default on
 - potential bug: "written text in bold" does not do anything? (Tyler_Zyco)
 - potential bug: "when automatic learning is off it still learns new words" (Nurgeldy Mugayev)
-- do not use autocorrection trait for disabling octopus
-- ability to change color of font and overlay including Clear color
 - doesn't work in any 3rd-party web browser???
-- do not block kana or other Japanese keyboard (Japanese,Korean) - must be disabled for these keyboards
+- do not block kana or other Japanese keyboard (Japanese,Korean,Chinese) - must be disabled for these keyboards!
 - bug: when typing fast, some characters are ignored
 - bug: hitting backspace does not always update suggestions 
 - bug: german keyboard problems (suggestions at wrong places) https://twitter.com/hinterfragt/status/220246228410171392/photo/1/large 
@@ -49,26 +36,21 @@ Todo octopus:
 - screenshot for web
 - I found that octopus, even disabled, inteferes with my natural typing speed on the ipad
 - clearer font for non-retina devices
+- unconfirmed: UITextField placeholders does not clear Placeholder when started typing - e.g. in iMessage
+- unconfirmed: Passcode lock keyboard problem
 - doublespace "." shortcut problem?
 - integrate iOS autocorrect
+- feature: Feature: Implement swipe left to delete word(s)?
 
 Low pri
 ---------
 - crashes with smileys?
-- editing user dictionary
-- Only load German dic./suggestions w.German keyboard
 - when moving cursor before a word, completing a suggestion replaces the word instead of inserting a new one.
 - do not suggest one-character words?
 - when the space pressed explicitly, don't remove that space on "dot".
 - long words may leak outside the screen
 - when swiping up on a key without suggestion, insert a space (configurable)
 - more suggestions for a single key are not used (but are limited with max suggestions)
-- after the maximum user words count is stored it should replace the oldest (less frequntly used words) instead of just not storing new words (Luke Christodoulou) 
 
-
-Config options octopus 
----------------------------
-- backspace deleting whole completion or last character and then whole word
-- learning words from Mail or other sources
 
 

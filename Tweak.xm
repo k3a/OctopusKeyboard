@@ -278,7 +278,10 @@ static void lookForSwipeSelection(void) {
 }
 static void handleEndedCancelled(CGPoint pnt, id akey, BOOL shift)
 {  
-	return; //TODO:ios7:fix
+	//TODO:ios7: this function needs to be updated for ios7. Just returning for ios7 for now..
+	if (IS_IOS7)
+		return;
+
     if (s_handled) return;
     s_handled = YES;
     
@@ -441,8 +444,9 @@ static void handleEndedCancelled(CGPoint pnt, id akey, BOOL shift)
 		if (!wordRange) wordRange = selRange;
 			
 		NSString* word = [inpd textInRange:wordRange];
-		//NSString* context = [self currentInputContextFromInputDelegateWithWordRange:wordRange]; //TODO:ios7:fix
-		NSString* context = word;
+		NSString* context = word; //TODO:ios7: not sure if that is a good equivalent of currentInputContextFromInputDelegateWithWordRange..
+		if (!IS_IOS7)
+			context = [self currentInputContextFromInputDelegateWithWordRange:wordRange]; // this was correct on ios6
 
 		int offset = [inpd offsetFromPosition:[wordRange end] toPosition:[selRange start]];
 		OLog(3, "++ CONTEXT: '%s|%s' OFFSET %d", [context UTF8String], [word UTF8String], offset);

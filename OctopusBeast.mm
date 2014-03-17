@@ -323,7 +323,8 @@ static BOOL digitsOnly(NSString* objcstr)
     static CGColor* redColor = [[[UIColor colorWithRed:.5f green:0 blue:0 alpha:1] retain] CGColor];
     
     // compute length of input
-    NSString* inp = _input;//[self inputString]; //TODO:ios7
+    NSString* inp = _input;//TODO:ios7 not sure if _input is a good alternative
+	if (!IS_IOS7) inp = [self inputString]; // this was ok on ios6
     unsigned inpLen = [inp length];
     
 	// get completed word
@@ -543,7 +544,8 @@ static BOOL digitsOnly(NSString* objcstr)
 
 	// HACK: set input from input manager directly
 	UIKeyboardInputManager* im = [ki inputManager];
-    NSString* wstr = _input;//[im inputString]; //TODO:ios7
+    NSString* wstr = _input;//TODO:ios7 not sure if this is a good alternative
+	if (!IS_IOS7) wstr = [self inputString]; // this was fine on ios6
     if (wstr) [_input setString:wstr];
     
     // check if input length is long enough
@@ -569,7 +571,8 @@ static BOOL digitsOnly(NSString* objcstr)
     _capitalizeWord = NO;
     if (wordRange)
     {
-        NSString* context = _input;//[ki currentInputContextFromInputDelegateWithWordRange:wordRange]; //TODO:ios7
+        NSString* context = _input;//TODO:ios7 not sure if that is a good alternative
+		if (!IS_IOS7) context = [ki currentInputContextFromInputDelegateWithWordRange:wordRange];
         if (context)
         {
 			int offset = [inpd offsetFromPosition:[wordRange end] toPosition:[selRange start]];

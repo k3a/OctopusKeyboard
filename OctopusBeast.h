@@ -15,6 +15,8 @@
 
 #define UIKeyboardTypeTwitter 9
 
+#define IS_IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+
 struct sLine
 {
 	float x1;
