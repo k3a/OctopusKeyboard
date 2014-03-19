@@ -1,5 +1,8 @@
 GO_EASY_ON_ME=1
 
+export TARGET=iphone:latest:6.0
+export ARCHS = armv7
+
 include theos/makefiles/common.mk
 
 BUNDLE_NAME = OKPrefs

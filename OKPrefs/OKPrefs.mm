@@ -308,7 +308,7 @@ static NSString* GetSystemLanguage()
 {
     if ( (self = [super init]) )
     {
-        self.view = [[UITextView alloc] initWithFrame:CGRectMake(0,0,320,400)];
+        [self setView: [[UITextView alloc] initWithFrame:CGRectMake(0,0,320,400)] ];
         NSString* path = [[NSBundle bundleForClass:[self class]] pathForResource:@"about" ofType:@"txt"];
         [self.view setText:[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil]];
         [self.view setEditable:NO];

@@ -14,7 +14,7 @@
 {
     if ( (self = [super init]) )
     {
-        self.view = [[UITableView alloc] initWithFrame:CGRectMake(0,0,320,400)];
+        [self setView: [[UITableView alloc] initWithFrame:CGRectMake(0,0,320,400)] ];
         [self.view setDataSource:self];
 		[self.view setDelegate:self];
         [[self navigationItem] setTitle:@"Dictionaries"];

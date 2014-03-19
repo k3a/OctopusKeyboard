@@ -1,22 +1,18 @@
 GO_EASY_ON_ME=1
 NO_RESPRING = 1
 
-include theos/makefiles/common.mk
-
-# use latest SDK but use iOS 5.0 as deployment target
-export TARGET=iphone:latest:5.0
+export TARGET=iphone:latest:6.0
 export ARCHS = armv7
 # use CLANG
 TARGET_CC = xcrun --sdk iphoneos clang
 TARGET_CXX = xcrun --sdk iphoneos clang++
-#TARGET_CC = xcrun --sdk iphoneos llvm-gcc
-#TARGET_CXX = xcrun --sdk iphoneos llvm-g++
+
+include theos/makefiles/common.mk
 
 SUBPROJECTS = octopuscore OKPrefs
 
 TWEAK_NAME = OctopusKeyboard
 OctopusKeyboard_FILES = Tweak.xm OctopusBeast.mm octopuscore/OctopusDaemon/octopusUser.c
-#OctopusKeyboard_FILES = Debug2.xm
 OctopusKeyboard_FRAMEWORKS = CoreGraphics UIKit QuartzCore
 OctopusKeyboard_PRIVATE_FRAMEWORKS = TextInput
 OctopusKeyboard_CFLAGS = -g0 -fvisibility=hidden -Iinclude -Iinclude/pal -Iinclude/pal/android -Iinclude/kptapi -Iinclude/kptapi/android -Ioctopuscore/OctopusDaemon
@@ -34,7 +30,7 @@ testw: distclean package
 	install.exec "killall MobileSafari ; sleep 1 ; ~mobile/open Safari"
 
 test: distclean package install
-	ssh ufoxy "killall MobileNotes; ~/open Notes"
+	ssh ufoxy "killall octopusd; sleep 2; killall MobileNotes; ~/open Notes"
 
 ptest: distclean package install
 	ssh root@ufoxy "killall Preferences ; sbopenurl 'prefs:root=Octopus Keyboard'"

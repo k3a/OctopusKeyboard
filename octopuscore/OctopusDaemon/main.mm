@@ -593,11 +593,10 @@ int main(int argc, char * argv[])
 	OLog(0, "--- DEBUG VERSION ---");
 #endif
 
-	pthread_t th;
-	pthread_create(&th, NULL, serverThread, NULL);
+	//pthread_t th;
+	//pthread_create(&th, NULL, serverThread, NULL);
 
-	while(true) sleep(1);
-	//serverThread(NULL);
+	serverThread(NULL);
 	
 	//pthread_t th2;
 	//pthread_create(&th2, NULL, timeThread, NULL);

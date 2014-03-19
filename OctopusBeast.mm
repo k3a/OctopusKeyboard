@@ -68,11 +68,14 @@ static mach_port_t GetServerPort()
     
     if (srvPort == 0)
     {
-		int sandbox_result = sandbox_check(getpid(), "mach-lookup", SANDBOX_FILTER_LOCAL_NAME | SANDBOX_CHECK_NO_REPORT, "me.k3a.octopusd");
-		if (sandbox_result)
+		if (IS_IOS7)
 		{
-			OErr("Mach lookup disabled by seatbelt");
-			return 0;
+			int sandbox_result = sandbox_check(getpid(), "mach-lookup", SANDBOX_FILTER_LOCAL_NAME | SANDBOX_CHECK_NO_REPORT, "me.k3a.octopusd");
+			if (sandbox_result)
+			{
+				OErr("Mach lookup disabled by seatbelt");
+				return 0;
+			}
 		}
 
         kr = bootstrap_look_up( bsPort, "me.k3a.octopusd", &srvPort );
@@ -312,7 +315,7 @@ static BOOL digitsOnly(NSString* objcstr)
 	if ([_keysDrawn containsObject:key]) return; // key already drawn
 	if (key) [_keysDrawn addObject:key];
 	 
-    NSLog(@"KEY '%@'", key);
+    //NSLog(@"KEY '%@'", key);
     
 	CGContextRef context = UIGraphicsGetCurrentContext();
     
@@ -545,7 +548,7 @@ static BOOL digitsOnly(NSString* objcstr)
 	// HACK: set input from input manager directly
 	UIKeyboardInputManager* im = [ki inputManager];
     NSString* wstr = _input;//TODO:ios7 not sure if this is a good alternative
-	if (!IS_IOS7) wstr = [self inputString]; // this was fine on ios6
+	if (!IS_IOS7) wstr = [im inputString]; // this was fine on ios6
     if (wstr) [_input setString:wstr];
     
     // check if input length is long enough

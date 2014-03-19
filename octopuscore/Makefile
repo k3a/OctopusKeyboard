@@ -2,14 +2,14 @@ GO_EASY_ON_ME=1
 #DEBUG = 1
 NO_RESPRING = 1
 
-include theos/makefiles/common.mk
-
 export TARGET=iphone:latest:5.0
 export ARCHS = armv7
 
+include theos/makefiles/common.mk
+
 TOOL_NAME = octopusd
 octopusd_FILES = OctopusDaemon/main.mm OctopusDaemon/TextInput.mm OctopusDaemon/Layouts.mm OctopusDaemon/octopusServer.c OctopusDaemon/octopusUser.c OctopusDaemon/examples.mm
-octopusd_FRAMEWORKS = AddressBook CoreGraphics UIKit QuartzCore
+octopusd_FRAMEWORKS = AddressBook
 octopusd_CFLAGS = -g0 -fvisibility=hidden -Wno-multichar -DIOS=1 -I. -I../include -I../include/pal -I../include/pal/android -I../include/kptapi -I../include/kptapi/android
 octopusd_LDFLAGS = -Wl,-s -Xlinker -s -L../lib -lkpt -lsqlite3
 
